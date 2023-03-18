@@ -9,12 +9,13 @@ plugins {
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '19'
-String generatedSourcesPath = 'src/main/java'
 
-compileJava {
-    File generatedSourceDir = project.file(generatedSourcesPath)
-    options.annotationProcessorGeneratedSourcesDirectory = generatedSourceDir
-    outputs.dir(generatedSourceDir)
+sourceSets {
+	main {
+		java {
+			srcDir '${buildDir}/generated/sources/annotationProcessor/java/main'
+		}
+	}
 }
 
 configurations {
