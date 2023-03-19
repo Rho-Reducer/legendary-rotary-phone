@@ -16,7 +16,7 @@ import lombok.NonNull;
 public class Article {
   
   @Id
-//  @GeneratedValue(strategy=GenerationType.AUTO)
+  @GeneratedValue(strategy=GenerationType.AUTO)
   @Column
   private long id;
 
@@ -25,7 +25,14 @@ public class Article {
   private String title;
   
   @Column
+  private String summary;
+  
+  @Column
   @NonNull
   private String content;
   
+  public Article() {
+    title = "";
+    content = "";
+  }
 }

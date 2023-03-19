@@ -35,3 +35,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+## Ignore node generated stuff ##
+node_modules/
+package-lock.json
+src/main/resources/static/built

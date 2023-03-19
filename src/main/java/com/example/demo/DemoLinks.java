@@ -4,8 +4,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DemoLinks {
-  
-  public static final String ARTICLES = "/articles";
-  public static final String ARTICLE = "/article";
-  public static final String SUBSCRIBE = "/subscribe";
+  private static final String API_ROOT = "/api";
+  public static final String ARTICLES = API_ROOT + "/articles";
+  public static final String ARTICLE = API_ROOT + "/article";
+  public static final String SUBSCRIBE = API_ROOT + "/subscribe";
 }
